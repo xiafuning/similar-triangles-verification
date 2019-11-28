@@ -1,4 +1,4 @@
-#Makefile for std mutex example
+#Makefile for similar triangles verification
 #http://man7.org/linux/man-pages/man1/g++.1.html
 
 IDIR_DEP     = 
