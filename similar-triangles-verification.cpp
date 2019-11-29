@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 
 
 void printMemory(int memory[], int size)
@@ -35,9 +36,7 @@ void bubbleSort(int dataIndex, int memory[])
 	}
 }
 
-
-
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
 	std::cout << "---start similar triangles verfication---" << std::endl;
 	// memory and parameter initialisation
@@ -47,7 +46,19 @@ int main(int argc,char *argv[])
 	int R_2 = 0;
 	int product_1 = 0;
 	int product_2 = 0;
+	if (argc != 7)
+	{
+		std::cerr << "Invalid number of input arguments\nPlease input the side lengths of 2 triangles" << std::endl;
+		return 1;
+	}
+	else
+	{
+		for (int i = 1; i < argc; i++ )
+		{
+			memory[i-1] = atoi(argv[i]);
+		}
 	
+	}
 	std::cout << "initial memory" << std::endl;
 	printMemory(memory, 6);
 
